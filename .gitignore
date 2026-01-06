@@ -1,0 +1,8 @@
+# Root gitignore
+web-control/node_modules/
+web-control/dist/
+esp32-firmware/.pio/
+esp32-firmware/.vscode/
+.vscode/
+*.log
+.DS_Store
