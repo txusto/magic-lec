@@ -3,6 +3,7 @@
 #include <ESPAsyncWebServer.h>
 #include <ArduinoJson.h>
 #include <FastLED.h>
+#include <LittleFS.h>
 
 // LED Configuration
 #define LED_PIN 5
@@ -204,6 +205,15 @@ void setup() {
     addCORSHeaders(resp);
     request->send(resp);
   });
+
+  // Initialize LittleFS
+  if(!LittleFS.begin()){
+    Serial.println("An Error has occurred while mounting LittleFS");
+    return;
+  }
+
+  // Serve static files
+  server.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
 
   // Start server
   server.begin();
