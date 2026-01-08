@@ -95,6 +95,7 @@ ESP32 DevKit V1          WS2812B LED Strip
 
    El servidor estará disponible en `http://localhost:3000`
 
+<<<<<<< HEAD
 4. **Modo Simulación (Sin ESP32)**: Para probar la interfaz sin hardware:
    ```bash
    npm run dev:mock
@@ -103,6 +104,8 @@ ESP32 DevKit V1          WS2812B LED Strip
    Esto iniciará la aplicación con datos simulados. Verás un indicador "🧪 Modo Simulación" en la interfaz.
    Todos los controles funcionarán normalmente, pero los cambios solo se reflejarán en el navegador.
 
+=======
+>>>>>>> 556a6cd0a1d7c359216f45c120b184816b4e4475
 ## 📱 Uso desde el Móvil
 
 ### Opción 1: Conectarse al ESP32 directamente (Recomendado)
